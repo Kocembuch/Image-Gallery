@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  overflow-x: hidden;
+}
+
+.gallery {
+  position: relative;
+  min-height: 100vh;
+}
+
+.gallery .title {
+  font-family: 'Chelsea Market';
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: black;
+  color: yellow;
+  box-shadow: 0 0 3px 3px black;
+}
+
+.gallery h1 {
+  font-size: 2rem;
+  padding: 2px 20px;
+  margin-bottom: 2px;
+}
+
+.gallery h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  height: 90%;
+  width: 90%;
+  transform: translate(50%);
+}
+
+.gallery a {
+  position: relative;
+  height: 40%;
+  flex-basis: 42%;
+  margin: 0 10px;
+  box-shadow: 0 0 3px 3px gray;
+  background-color: lightgray;
+}
+
+img {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 85%;
+  max-width: 95%;
+}
+
+.hide {
+  display: none;
+}
+
+h3 {
+  font-family: 'Lobster Two', cursive;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  width: 100%;
+}
+
+@media (orientation: portrait) {
+
+  .gallery .title {
+    top: 3%;
+    width: 90vw;
+    text-align: center;
+  }
+
+  .gallery h1 {
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    margin-bottom: 5px;
+  }
+
+  .gallery h2 {
+    font-size: 0.8rem;
+  }
+
+  .gallery .images {
+    align-content: space-around;
+    justify-content: space-around;
+    top: 35vh;
+    height: 70%;
+  }
+
+  .gallery a {
+    height: 50%;
+    flex-basis: 90%;
+    min-width: 90vw;
+    margin: 1vh 10px;
+    box-shadow: 0 0 3px 3px gray;
+    background-color: lightgray;
+  }
+
+  img {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 80%;
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+    bottom: 3%;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+
+  .gallery .title {
+    top: 3%;
+    width: 90vw;
+    text-align: center;
+  }
+
+  .gallery h1 {
+    font-size: 1.1rem;
+    padding: 2px 20px;
+    margin-bottom: 5px;
+  }
+
+  .gallery h2 {
+    font-size: 0.6rem;
+  }
+
+  h3 {
+    font-size: 0.6rem;
+    bottom: 1%;
+  }
+
+  .gallery .images {
+    align-content: space-around;
+    justify-content: space-around;
+    height: 85%;
+    bottom: 1vh;
+    top: 15%;
+  }
+}
